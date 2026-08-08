@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Artemis</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/moon.min.css">
+  <style>
+
+    .reveal { color: white; }
+    .slide-background {
+      filter: brightness(50%);
+    }
+
+  </style>
+</head>
+<body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- CAPTAIN -->
+        <section class="captain">
+          <h1>
+            Good captains are good communicators 
+          </h1>
+        </section>
+        <section class="captain">
+          <h1>
+            Don't micro-manage 
+          </h1>
+        </section>
+        <section class="captain">
+          <h1>
+            Science and comms have useful information
+          </h1>
+        </section>
+        <section class="captain">
+          <h1>
+            Spare homing torpedos can be converted to energy
+          </h1>
+        </section>
+        <section class="captain">
+          <h2>
+            Self-destruct sequence
+          </h2>
+          <ol style="font-size: 1.5em;">
+            <li>Full stop</li>
+            <li>Lower shields</li>
+            <li>Power down all systems</li>
+            <li>Warp core power to 300%</li>
+            <li>💥</li>
+          </ol>
+        </section>
+
+        <!-- HELM -->
+        <section class="helm">
+          <h1>
+            You can turn faster at slower speeds
+          </h1>
+        </section>
+        <section class="helm">
+          <h1>
+            Keep distance from nuke detonations
+          </h1>
+        </section>
+        <section class="helm">
+          <h1>
+            Concentrate weapons fire on the same shield hemisphere
+          </h1>
+        </section>
+        <section class="helm">
+          <h1>
+            Helm steers the ship and requests docking
+          </h1>
+        </section>
+
+        <!-- WEAPONS -->
+        <section class="weapons">
+          <h1>
+            Tune beams to weakest shield frequency
+          </h1>
+        </section>
+        <section class="weapons">
+          <h1>
+            Nukes have a large blast radius
+          </h1>
+        </section>
+        <section class="weapons">
+          <h1>
+            Time a torpedo to hit the weakest shield hemisphere
+          </h1>
+        </section>
+        <section class="weapons">
+          <h1>
+            Weapons controls the main screen
+          </h1>
+        </section>
+        <section class="weapons">
+          <h1>
+            De-activate shields to save power
+          </h1>
+        </section>
+        <section class="weapons">
+          <h1>
+            Energy can be converted to torpedos
+          </h1>
+        </section>
+        <section class="weapons">
+          <h1>
+            Torpedos must be loaded before fired
+          </h1>
+        </section>
+        <section class="weapons">
+          <h1>
+            Weapons can fire beams or torpedos or both
+          </h1>
+        </section>
+
+        <!-- ENGINEERING -->
+        <section class="engineering">
+          <h1>
+            Increase power to beams for more shots per second
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Increase power to tubes for faster reload speed
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Increase power to shields to absorb more hits
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Increase power to impulse and warp to go faster
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Increase power to maneuver for faster turning speeds
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Sensors go offline if tactical is not powered
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Engineering has the most power over the ship
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Engineering has the least tactical information
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Don't fully power down systems while in danger
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Shut down every system to slowly regain power
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Engineering controls power, cooling, and damage control
+          </h1>
+        </section>
+        <section class="engineering">
+          <h1>
+            Eight units of coolant cools up to 250% power
+          </h1>
+        </section>
+
+        <!-- SCIENCE -->
+        <section class="science">
+          <h1>
+            Regain energy from space anomalies 
+          </h1>
+        </section>
+        <section class="science">
+          <h1>
+            Enemies can be scanned more than once
+          </h1>
+        </section>
+        <section class="science">
+          <h1>
+            Science is the eyes of the ship
+          </h1>
+        </section>
+
+        <!-- COMMS -->
+        <section class="comms">
+          <h1>
+            Red alert is entirely cosmetic
+          </h1>
+        </section>
+        <section class="comms">
+          <h1>
+            Red alert is activated by comms
+          </h1>
+        </section>
+        <section class="comms">
+          <h1>
+            Each enemy will respond to each taunt only once
+          </h1>
+        </section>
+        <section class="comms">
+          <h1>
+            Comms is the voice of the ship
+          </h1>
+        </section>
+
+      </div>
+    </div>
+    <script>
+
+      function shuffle( array ) {
+        let currentIndex = array.length;
+
+        while (currentIndex != 0) {
+          let randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      }
+
+      const backgrounds = [
+      'b5-ext.jpg',
+      'b5-fighter.jpg',
+      'bsg-battle.png',
+      'bsg-cast-orig.jpg',
+      'bsg-damage.jpg',
+      'bsg-damage2.jpg',
+      'bsg-damage3.jpg',
+      'bsg-ext1.jpg',
+      'bsg-ext2.jpg',
+      'bsg-ext4.jpg',
+      'bsg-ext5.jpg',
+      'bsg-ext6.jpg',
+      'bsg-fighters.jpg',
+      'bsg-fleet.jpg',
+      'bsg-fleet1.jpg',
+      'bsg-hanger1.png',
+      'bsg-nightbird.png',
+      'bsg-pegasus1.jpg',
+      'bsg-pursuit.jpg',
+      'bsg-viper-launch.jpg',
+      'bsg-viper.jpg',
+      'defiant-schematic1.jpg',
+      'expanse-battle.jpg',
+      'expanse-ext.png',
+      'expanse-ext2.jpg',
+      'expanse-mess.jpg',
+      'expanse-station.jpg',
+      'galaxyquest-bridge1.jpg',
+      'klingon-bridge1.jpg',
+      'lcars1.jpg',
+      'startrek-borg-battle.jpg',
+      'startrek-bridge2.jpg',
+      'startrek-bridge3.jpg',
+      'startrek-excelsior.jpg',
+      'startrek-ext-strange.jpg',
+      'startrek-kirk1.jpeg',
+      'startrek-kirk2.jpg',
+      'startrek-kirk3.jpg',
+      'startrek-kirk4.jpg',
+      'startrek-navigation1.jpg',
+      'startrek-picard12.jpg',
+      'startrek-picard2.jpg',
+      'startrek-seven1.jpg',
+      'startrek-seven2.jpg',
+      'startrek-spock1.jpg',
+      'startrek-spock2.jpg',
+      'startrek-spock3.jpg',
+      'startrek-uhura1.webp',
+      'startrek-uhura2.jpg',
+      'startrek-worf1.jpg',
+      'startrek-worf2.jpg',
+      'starwars-bridge-falcon1.jpg',
+      'starwars-bridge-lego.jpg',
+      'starwars-bridge-venator.png',
+      'starwars-bridge1.jpg',
+      'starwars-bridge2.png',
+      'starwars-bridge3.jpg',
+      'starwars-bridge4-darthvader.jpg',
+      'starwars-ext-super.jpg',
+      'starwars-ext1.jpg',
+      'starwars-ext2.jpg',
+      'starwars-falcon2.jpg',
+      'starwars-hallway1.jpg',
+      'starwars-station.jpg',
+      'tas-bridge1.jpg',
+      'tng-bridge1.jpg',
+      'tng-bridge2.jpg',
+      'tng-bridge3.jpg',
+      'tng-brige2.jpg',
+      'tos-bridge.jpg',
+      'tos-bridge2.jpg',
+      'tos-bridge4.jpg',
+      'tos0.jpg',
+      'tos12.jpg',
+      'tos13.jpg',
+      'tos15.png',
+      'tos17.jpg',
+      'tos3.jpg',
+      'tos5.png',
+      'tos6.jpg',
+      'tos8.jpg',
+      'valkyrie-ext1.jpg',
+      'voy-bridge1.jpg',
+      ];
+
+      const transitions = [
+        'none',
+        'fade',
+        'slide',
+        'convex',
+        'concave',
+        'zoom',
+      ];
+
+      shuffle( backgrounds );
+
+      let i = 0;
+      document.querySelectorAll('.slides section').forEach( slide => {
+        // let randomTransition = transitions[Math.floor(Math.random()*transitions.length)];
+        slide.setAttribute( 'data-background-image', 'backgrounds/' + backgrounds[i % backgrounds.length] );
+        slide.setAttribute( 'data-transition', transitions[i % transitions.length] ); // randomTransition );
+        i++;
+      });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+    <script>
+
+      // Slide every five seconds
+      Reveal.initialize({
+        loop: true,
+        autoSlide: 30000,
+        shuffle: true,
+        /*
+        controls: false,
+        */
+      });
+
+    </script>
+  </body>
+</html>
