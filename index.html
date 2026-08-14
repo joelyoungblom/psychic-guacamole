@@ -493,135 +493,136 @@
 
       </div>
     </div>
-    <script>
-
-      function shuffle( array ) {
-        let currentIndex = array.length;
-
-        while (currentIndex != 0) {
-          let randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex--;
-          [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-        }
-      }
-
-      const backgrounds = [
-      'b5-ext.jpg',
-      'b5-fighter.jpg',
-      'bsg-battle.png',
-      'bsg-cast-orig.jpg',
-      'bsg-damage.jpg',
-      'bsg-damage2.jpg',
-      'bsg-damage3.jpg',
-      'bsg-ext1.jpg',
-      'bsg-ext2.jpg',
-      'bsg-ext4.jpg',
-      'bsg-ext5.jpg',
-      'bsg-ext6.jpg',
-      'bsg-fighters.jpg',
-      'bsg-fleet.jpg',
-      'bsg-fleet1.jpg',
-      'bsg-hanger1.png',
-      'bsg-nightbird.png',
-      'bsg-pegasus1.jpg',
-      'bsg-pursuit.jpg',
-      'bsg-viper-launch.jpg',
-      'bsg-viper.jpg',
-      'defiant-schematic1.jpg',
-      'expanse-battle.jpg',
-      'expanse-ext.png',
-      'expanse-ext2.jpg',
-      'expanse-mess.jpg',
-      'expanse-station.jpg',
-      'galaxyquest-bridge1.jpg',
-      'klingon-bridge1.jpg',
-      'lcars1.jpg',
-      'startrek-borg-battle.jpg',
-      'startrek-bridge2.jpg',
-      'startrek-bridge3.jpg',
-      'startrek-excelsior.jpg',
-      'startrek-ext-strange.jpg',
-      'startrek-kirk1.jpeg',
-      'startrek-kirk2.jpg',
-      'startrek-kirk3.jpg',
-      'startrek-kirk4.jpg',
-      'startrek-navigation1.jpg',
-      'startrek-picard12.jpg',
-      'startrek-picard2.jpg',
-      'startrek-seven1.jpg',
-      'startrek-seven2.jpg',
-      'startrek-spock1.jpg',
-      'startrek-spock2.jpg',
-      'startrek-spock3.jpg',
-      'startrek-uhura1.webp',
-      'startrek-uhura2.jpg',
-      'startrek-worf1.jpg',
-      'startrek-worf2.jpg',
-      'starwars-bridge-falcon1.jpg',
-      'starwars-bridge-lego.jpg',
-      'starwars-bridge-venator.png',
-      'starwars-bridge1.jpg',
-      'starwars-bridge2.png',
-      'starwars-bridge3.jpg',
-      'starwars-bridge4-darthvader.jpg',
-      'starwars-ext-super.jpg',
-      'starwars-ext1.jpg',
-      'starwars-ext2.jpg',
-      'starwars-falcon2.jpg',
-      'starwars-hallway1.jpg',
-      'starwars-station.jpg',
-      'tas-bridge1.jpg',
-      'tng-bridge1.jpg',
-      'tng-bridge2.jpg',
-      'tng-bridge3.jpg',
-      'tng-brige2.jpg',
-      'tos-bridge.jpg',
-      'tos-bridge2.jpg',
-      'tos-bridge4.jpg',
-      'tos0.jpg',
-      'tos12.jpg',
-      'tos13.jpg',
-      'tos17.jpg',
-      'tos3.jpg',
-      'tos5.png',
-      'tos6.jpg',
-      'tos8.jpg',
-      'valkyrie-ext1.jpg',
-      'voy-bridge1.jpg',
-      ];
-
-      const transitions = [
-        'none',
-        'fade',
-        'slide',
-        'convex',
-        'concave',
-        'zoom',
-      ];
-
-      shuffle( backgrounds );
-
-      let i = 0;
-      document.querySelectorAll('.slides section').forEach( slide => {
-        // let randomTransition = transitions[Math.floor(Math.random()*transitions.length)];
-        slide.setAttribute( 'data-background-image', 'backgrounds/' + backgrounds[i % backgrounds.length] );
-        // slide.setAttribute( 'data-transition', transitions[i % transitions.length] ); // randomTransition );
-        i++;
-      });
-
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
     <script>
 
-      // Slide every five seconds
-      Reveal.initialize({
-        loop: true,
-        autoSlide: 30000,
-        shuffle: true,
-        /*
-        controls: false,
-        */
+      document.addEventListener('DOMContentLoaded', (event) => {
+        function shuffle( array ) {
+          let currentIndex = array.length;
+
+          while (currentIndex != 0) {
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [
+              array[randomIndex], array[currentIndex]];
+          }
+        }
+
+        const backgrounds = [
+        'b5-ext.jpg',
+        'b5-fighter.jpg',
+        'bsg-battle.png',
+        'bsg-cast-orig.jpg',
+        'bsg-damage.jpg',
+        'bsg-damage2.jpg',
+        'bsg-damage3.jpg',
+        'bsg-ext1.jpg',
+        'bsg-ext2.jpg',
+        'bsg-ext4.jpg',
+        'bsg-ext5.jpg',
+        'bsg-ext6.jpg',
+        'bsg-fighters.jpg',
+        'bsg-fleet.jpg',
+        'bsg-fleet1.jpg',
+        'bsg-hanger1.png',
+        'bsg-nightbird.png',
+        'bsg-pegasus1.jpg',
+        'bsg-pursuit.jpg',
+        'bsg-viper-launch.jpg',
+        'bsg-viper.jpg',
+        'defiant-schematic1.jpg',
+        'expanse-battle.jpg',
+        'expanse-ext.png',
+        'expanse-ext2.jpg',
+        'expanse-mess.jpg',
+        'expanse-station.jpg',
+        'galaxyquest-bridge1.jpg',
+        'klingon-bridge1.jpg',
+        'lcars1.jpg',
+        'startrek-borg-battle.jpg',
+        'startrek-bridge2.jpg',
+        'startrek-bridge3.jpg',
+        'startrek-excelsior.jpg',
+        'startrek-ext-strange.jpg',
+        'startrek-kirk1.jpeg',
+        'startrek-kirk2.jpg',
+        'startrek-kirk3.jpg',
+        'startrek-kirk4.jpg',
+        'startrek-navigation1.jpg',
+        'startrek-picard12.jpg',
+        'startrek-picard2.jpg',
+        'startrek-seven1.jpg',
+        'startrek-seven2.jpg',
+        'startrek-spock1.jpg',
+        'startrek-spock2.jpg',
+        'startrek-spock3.jpg',
+        'startrek-uhura1.webp',
+        'startrek-uhura2.jpg',
+        'startrek-worf1.jpg',
+        'startrek-worf2.jpg',
+        'starwars-bridge-falcon1.jpg',
+        'starwars-bridge-lego.jpg',
+        'starwars-bridge-venator.png',
+        'starwars-bridge1.jpg',
+        'starwars-bridge2.png',
+        'starwars-bridge3.jpg',
+        'starwars-bridge4-darthvader.jpg',
+        'starwars-ext-super.jpg',
+        'starwars-ext1.jpg',
+        'starwars-ext2.jpg',
+        'starwars-falcon2.jpg',
+        'starwars-hallway1.jpg',
+        'starwars-station.jpg',
+        'tas-bridge1.jpg',
+        'tng-bridge1.jpg',
+        'tng-bridge2.jpg',
+        'tng-bridge3.jpg',
+        'tng-brige2.jpg',
+        'tos-bridge.jpg',
+        'tos-bridge2.jpg',
+        'tos-bridge4.jpg',
+        'tos0.jpg',
+        'tos12.jpg',
+        'tos13.jpg',
+        'tos17.jpg',
+        'tos3.jpg',
+        'tos5.png',
+        'tos6.jpg',
+        'tos8.jpg',
+        'valkyrie-ext1.jpg',
+        'voy-bridge1.jpg',
+        ];
+
+        const transitions = [
+          'none',
+          'fade',
+          'slide',
+          'convex',
+          'concave',
+          'zoom',
+        ];
+
+        shuffle( backgrounds );
+
+        let i = 0;
+        document.querySelectorAll('.slides section').forEach( slide => {
+          // let randomTransition = transitions[Math.floor(Math.random()*transitions.length)];
+          slide.setAttribute( 'data-background-image', 'backgrounds/' + backgrounds[i % backgrounds.length] );
+          // slide.setAttribute( 'data-transition', transitions[i % transitions.length] ); // randomTransition );
+          i++;
+        });
+
+        // Slide every five seconds
+        Reveal.initialize({
+          loop: true,
+          autoSlide: 30000,
+          shuffle: true,
+          /*
+          controls: false,
+          */
+        });
+
+
       });
 
     </script>
